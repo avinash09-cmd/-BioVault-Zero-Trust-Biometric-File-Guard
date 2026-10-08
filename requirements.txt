@@ -1,0 +1,44 @@
+# ==============================================================================
+# 1. CORE UI & GRAPHICS PIPELINE (biovault_ui_sample.py)
+# ==============================================================================
+customtkinter>=5.2.2
+darkdetect>=0.8.0
+packaging>=23.0
+pillow>=10.2.0
+typing_extensions>=4.10.0
+
+# ==============================================================================
+# 2. COMPUTER VISION & NUMERICAL ENGINE (biometric_engine.py)
+# ==============================================================================
+numpy>=1.26.4,<2.1.0
+opencv-contrib-python>=4.8.1.78,<5.0.0
+scipy>=1.12.0
+
+# ==============================================================================
+# 3. BIOMETRIC & DEEP-LEARNING SUB-DEPENDENCIES (Active + Fallback Support)
+# Explicitly included so pip verifies or installs every underlying requirement
+# ==============================================================================
+onnxruntime>=1.17.0
+ onnx>=1.16.0
+protobuf>=4.25.3,<5.0.0
+flatbuffers>=24.3.25
+absl-py>=2.1.0
+attrs>=23.2.0
+matplotlib>=3.8.0
+sounddevice>=0.4.6
+scikit-learn>=1.4.0
+scikit-image>=0.22.0
+albumentations>=1.4.0
+easydict>=1.13
+prettytable>=3.10.0
+tqdm>=4.66.0
+requests>=2.31.0
+pyyaml>=6.0.1
+cython>=3.0.0
+
+# ==============================================================================
+# 4. VERSION-GATED BIOMETRIC PACKAGES (Auto-installed if Python < 3.13, 
+# safely skipped by pip on Python 3.13 so installation never crashes)
+# ==============================================================================
+mediapipe>=0.10.14; python_version < "3.13"
+insightface>=0.7.3; python_version < "3.13"
